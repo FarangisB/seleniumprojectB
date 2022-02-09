@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Task003 {
+public class Task003_UsingCSSSelector {
 
     public static void main(String[] args) {
 
@@ -18,11 +18,13 @@ public class Task003 {
 
     //    3- Verify “Log in” button text is as expected:
     //    Expected: Log In
-        WebElement logInBtn = driver.findElement(By.className("login-btn"));
+    //    WebElement logInBtn = driver.findElement(By.cssSelector("input[type='submit']"));
+    //    WebElement logInBtn = driver.findElement(By.cssSelector("input[value='Log In']"));
+        WebElement logInBtn = driver.findElement(By.cssSelector("input[class='login-btn']"));
         String expectedLogInBtn = "Log In";
         String actualLogInBtn = logInBtn.getAttribute("value");
 
-        if (actualLogInBtn.equals(expectedLogInBtn)) {
+        if(expectedLogInBtn.equals(actualLogInBtn)){
             System.out.println("Test Passed!");
         }else{
             System.out.println("Test Not Passed!");
@@ -32,11 +34,6 @@ public class Task003 {
 
 
 
+
     }
 }
-/**
- * PS: Inspect and decide which locator you should be using to locate web
- *         elements.
- *                 PS2: Pay attention to where to get the text of this button from
- */
-

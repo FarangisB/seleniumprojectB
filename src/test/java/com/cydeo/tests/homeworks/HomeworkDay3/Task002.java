@@ -1,19 +1,16 @@
 package com.cydeo.tests.homeworks.HomeworkDay3;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task002 {
 
     public static void main(String[] args) {
     //  TC #2: NextBaseCRM, locators, getText(), getAttribute() practice
     //  1. Open a Chrome browser
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
     // 2. Go to: https://login1.nextbasecrm.com/
         driver.get("https://login1.nextbasecrm.com/");
@@ -44,7 +41,6 @@ public class Task002 {
     // 5. Verify “forgot password” href attribute’s value contains expected:
     // Expected: forgot_password=yes
 
-        WebElement forgotPasswordHrefAttribute = driver.findElement(By.className("login-link-forgot-pass"));
         String forgotPasswordHrefAttributeContains = "forgot_password=yes";
         String actualForgotPasswordTextHrefAttribute = forgotPassword.getAttribute("href");
 
