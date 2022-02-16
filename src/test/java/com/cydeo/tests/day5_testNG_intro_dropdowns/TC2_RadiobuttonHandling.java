@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class TC2 {
+public class TC2_RadiobuttonHandling {
 
     public static void main(String[] args) {
 

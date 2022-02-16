@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestNG_Selenium {
+public class TestNG_Selenium_Assert {
 
     WebDriver driver;
 
