@@ -48,6 +48,7 @@ public class TC1 {
 
    */
 
+        // Logging in to SmartBear app
         SmartBearUtils.loginToSmartBear(driver);
 
         //6. Print out count of all the links on landing page
