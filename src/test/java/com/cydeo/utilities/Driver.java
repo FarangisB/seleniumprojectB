@@ -52,9 +52,6 @@ public class Driver {
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
-
-
-
             }
 
         }
@@ -65,5 +62,11 @@ public class Driver {
     // driver.quit() --> nosuchelement
     // driver.close() -->
     // try to not do it before next class
+    public static void closeDriver(){
+        if(driver!=null){
+            driver.quit(); // this line will terminate the existing session. Value will not even be null
+            driver=null;
+        }
+    }
 
 }
