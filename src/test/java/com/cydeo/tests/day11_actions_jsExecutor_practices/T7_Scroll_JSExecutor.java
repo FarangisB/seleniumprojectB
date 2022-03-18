@@ -1,4 +1,4 @@
-package com.cydeo.tests.day11;
+package com.cydeo.tests.day11_actions_jsExecutor_practices;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
